@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Animation </title>
+</head>
+<body>    
+    <div class="container">
+        
+        <div class="box">
+            <h1>Animation</h1>
+            <div class="content-animation">
+                <div class="pelota-animation">
+                    <div id="ball"></div>
+                    <div id="shadow"></div>
+                </div>
+                <div class="cup-animation">
+                    <div id="grifo"></div>
+                    <div id="gota"></div>
+                    <div id="gota2"></div>
+                    <div id="cup"></div>
+                    <div id="water"></div>
+                    
+                </div>
+            </div>
+            
+                
+            
+            <h4>By: Danmit</h4>
+        </div>
+        
+    </div>
+
+    <script>
+       const $gota1 = document.querySelector('#gota');
+       const $gota2 = document.querySelector('#gota2');
+        $gota1.addEventListener("webkitAnimationIteration" ,  (e) =>
+        {
+            
+           $gota2.classList.add('animate');
+           $gota2.addEventListener('animationend', (e) => 
+           {
+            $gota2.classList.remove('animate');
+           } );
+            
+            
+        });
+        
+    </script>
+</body>
+</html>
